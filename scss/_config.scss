@@ -40,26 +40,26 @@ $background-opacity: 0.3;
 }
 
 // Media Query Mixins
-@mixin  mediaSm {
-    @media screen and (max-width: 500px) {
+@mixin  mediaS {
+    @media screen and (max-width: 576px) {
         @content;
     }
 }
 
-@mixin  mediaMd {
+@mixin  mediaM {
     @media screen and (max-width: 768px) {
         @content;
     }
 }
 
-@mixin  mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
+@mixin  mediaL {
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
         @content;
     }
 }
 
-@mixin  mediaXl {
-    @media screen and (min-width: 1171px) {
+@mixin  mediaXL {
+    @media screen and (min-width: 1200px) {
         @content;
     }
 }
