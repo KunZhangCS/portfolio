@@ -263,4 +263,7 @@ footer {
       margin-top: 1rem;
       font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .menu-btn {
+    right: 1px;
+    top: 35px; } }
