@@ -160,7 +160,13 @@ section {
     display: block;
     padding: 0.5rem 1rem;
     border: 0;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.3rem;    
+}
+
+.btn-dark {
+    @extend .btn;
+    background-color: lighten($primary-color, 10);
+    color: #fff;
 
     &:hover {
         background-color: #fff;
@@ -168,16 +174,10 @@ section {
     }
 }
 
-.btn-dark {
-    @extend .btn;
-    background-color: lighten($primary-color, 10);
-    color: #fff;
-}
-
 .btn-light {
     @extend .btn;
     background-color: lighten($primary-color, 70);
-    color: #333;
+    color: #333;    
 }
 
 footer {

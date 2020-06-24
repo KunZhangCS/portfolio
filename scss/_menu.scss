@@ -87,7 +87,6 @@
             background: $portrait-image;
             border-radius: 50%;
             border: solid 3px $secondary-color;
-            // May use small img
             background-size: cover
         }
     }
@@ -100,9 +99,10 @@
             transform: translate3d(0, 0, 0);
         }
 
-        &.current > a {
-            color: $secondary-color;
-        }
+        // Add this function later
+        // &.current > a {
+        //     color: $secondary-color;
+        // }
     }
 
     .nav-link {

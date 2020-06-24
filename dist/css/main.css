@@ -63,8 +63,6 @@
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
-    .menu .nav-item.current > a {
-      color: #FEE715FF; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -200,13 +198,13 @@ section {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background-color: #fff;
-    color: #FEE715FF; }
 
 .btn-dark {
   background-color: #213242;
   color: #fff; }
+  .btn-dark:hover {
+    background-color: #fff;
+    color: #FEE715FF; }
 
 .btn-light {
   background-color: #b9cbdc;
