@@ -6,9 +6,8 @@
 }
 
 body {
-    @include background;
-    background-color: $primary-color;
-    color: set-text-color($primary-color);
+    background: linear-gradient(to bottom left, rgb(113, 180, 243), rgb(81, 216, 240), rgb(182, 243, 238), rgb(238, 250, 248));
+    color: $primary-color;
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,7 +26,7 @@ h1, h2, h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
+        background: rgba(lighten($primary-color, 20), 0.05);
     }
 }
 
@@ -46,11 +45,16 @@ header {
     color: $secondary-color;
 }
 
-main {
+section {
     padding: 4rem;
     //height: 100%
     // User calc to keep the footer sticking at the bottom
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 40px);
+    overflow: hidden;
+    h1 {
+        margin-top: 5vh;
+    }
+    border-bottom: 5px #fff solid;
 
     .icons {
         margin-top: 1rem;
@@ -64,21 +68,14 @@ main {
             }
         }
     }
-
-    &#home {
-        overflow: hidden;
-        h1 {
-            margin-top: 20vh;
-        }
-    }
 }
 
 .about-info {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 60px;
     grid-template-areas: 
     'bioimage bio bio'
-    'job1 job2 job3';
+    'self1 self2 self3';
     grid-template-columns: repeat(3, 1fr);
 
     .bio-image {
@@ -96,22 +93,22 @@ main {
         font-size: 1.5rem;
     }
 
-    .job-1 {
-        grid-area: job1;
+    .self-1 {
+        grid-area: self1;
     }
 
-    .job-2 {
-        grid-area: job2;
+    .self-2 {
+        grid-area: self2;
     }
 
-    .job-3 {
-        grid-area: job3;
+    .self-3 {
+        grid-area: self3;
     }
 
-    .job {
-        background: lighten($primary-color, 5);
+    .self {
+        background: rgba(lighten($primary-color, 20), 0.05);
         padding: 0.5rem;
-        border-bottom: $secondary-color 5px solid;
+        border-bottom: $secondary-color 3px solid;
     }
 }
 
@@ -122,8 +119,10 @@ main {
     grid-template-columns: repeat(3, 1fr);
 
     img {
+        height: 30vh;
         width: 100%;
-        border: 3px #fff solid;
+        border: 3px #fff solid;        
+        object-fit: cover;
 
         &:hover {
             opacity: 0.5;
@@ -151,10 +150,7 @@ main {
         &:hover {
             padding: 0.5rem 1.5rem;
             background-color: $secondary-color;
-            color: set-text-color($secondary-color);
-            span {
-                color: set-text-color($secondary-color);
-            }
+            color:$primary-color;
         }
     }
 }
@@ -167,30 +163,31 @@ main {
     margin-bottom: 0.3rem;
 
     &:hover {
-        background-color: $secondary-color;
-        color: set-text-color($secondary-color);
+        background-color: #fff;
+        color: $secondary-color;
     }
 }
 
 .btn-dark {
     @extend .btn;
-    background-color: darken($primary-color, 50);
+    background-color: lighten($primary-color, 10);
     color: #fff;
 }
 
 .btn-light {
     @extend .btn;
-    background-color: lighten($primary-color, 50);
+    background-color: lighten($primary-color, 70);
     color: #333;
 }
 
-#main-footer {
+footer {
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     background: darken($primary-color, 10);
-    color: set-text-color($primary-color);
-    height: 60px;
+    color: $primary-color;
+    height: 40px;
 }
 
 // run after the main css
 @import 'mobile';
+
