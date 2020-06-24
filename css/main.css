@@ -213,8 +213,8 @@ section {
 footer {
   text-align: center;
   padding: 0.5rem;
-  background: black;
-  color: #101820FF;
+  background: #101820FF;
+  color: #FEE715FF;
   height: 40px; }
 
 @media screen and (min-width: 1200px) {
